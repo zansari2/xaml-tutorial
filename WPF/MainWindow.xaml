@@ -3,19 +3,52 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
+        Background="{DynamicResource WindowBackgroundBrush}"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Name ="pnlMainGrid" MouseUp="pnlMainGrid_MouseUp" Background="DarkGray">
-        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Margin="216,162,212,161" Height="96" Width="364" Grid.Column="2">
+    <Window.Resources>
+        <sys:String x:Key="strApp">Hello, Application world!</sys:String>
+        <sys:String x:Key="strWindow">Hello, Window world!</sys:String>
+        <sys:String x:Key="ComboBoxTitle">Items:</sys:String>
+
+        <x:Array x:Key="ComboBoxItems" Type="sys:String">
+            <sys:String>Item #1</sys:String>
+            <sys:String>Item #2</sys:String>
+            <sys:String>Item #3</sys:String>
+        </x:Array>
+
+        <LinearGradientBrush x:Key="WindowBackgroundBrush">
+            <GradientStop Offset="0" Color="Silver"/>
+            <GradientStop Offset="1" Color="Gray"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+    
+    <Grid Name ="pnlMainGrid" Background="DarkGray">
+        <StackPanel Margin="10">
+            <Label Content="{StaticResource ComboBoxTitle}" />
+            <ComboBox ItemsSource="{StaticResource ComboBoxItems}" />
+        </StackPanel>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="72" Height="96" Width="364">
             Woops
         </TextBlock>
-        <Button Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="29,24,663,295">
+        <Button Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="0,0,0,170" >
             <WrapPanel>
                 <TextBlock Foreground="WhiteSmoke">Multi</TextBlock>
                 <TextBlock Foreground="PapayaWhip">Color</TextBlock>
                 <TextBlock Foreground="Gray">B</TextBlock>
             </WrapPanel>
         </Button>
+        <DockPanel Margin="-500,0,0,0" Name="pnlMain" Height="200" Width="200" >
+            <DockPanel.Resources>
+                <sys:String x:Key="strPanel">Hello, Panel world!</sys:String>
+            </DockPanel.Resources>
+
+            <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" Margin="10">
+                <Button Name="btnClickMe" Click="btnClickMe_Click">Click me!</Button>
+            </WrapPanel>
+            <ListBox Name="lbResult" />
+        </DockPanel>
     </Grid>
 </Window>
