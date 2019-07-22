@@ -6,6 +6,6 @@
         xmlns:local="clr-namespace:Tutorial1"
         mc:Ignorable="d"
         Source="Home.xaml"
-        Title="ExpenseIt" Height="350" Width="500">
+        Title="ExpenseIt" Height="500" Width="450">
     
 </NavigationWindow>
