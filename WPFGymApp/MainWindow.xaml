@@ -39,8 +39,8 @@
         <Button Name ="Button4" Margin="20,200,0,0" Height="50" Width="100" HorizontalAlignment="Left" Background="LightGray">
             <TextBlock>Option 4</TextBlock>
         </Button>
-        <TextBlock Background="{DynamicResource TabBrush}" Margin ="0,50,10,0" VerticalAlignment="Top" Name ="Tab1" TextAlignment="Center" Height="300" Width="100" FontSize="20" HorizontalAlignment="Right">
-            <Bold>Stats</Bold>
+        <TextBlock Background="White" Margin ="0,50,10,0" VerticalAlignment="Top" Name ="Tab1" TextAlignment="Center" Height="300" Width="100" FontSize="20" HorizontalAlignment="Right">
+            Stats
         </TextBlock>
         <TabControl  Margin ="10,100,10,0" VerticalAlignment="Top" Name ="Tab3" Height="270" Width="650" FontSize="20" HorizontalAlignment="Left">
             <TabItem Header="Option1">
@@ -50,7 +50,7 @@
             <TabItem Header="Option3" />
         </TabControl>
         
-        <Button Name ="Tab1Button" Margin="0,0,10,20" Height="50" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="{DynamicResource ButtonBrush}">
+        <Button Name ="Tab1Button" Margin="0,0,10,20" Height="50" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFAAAAAA">
             <TextBlock>Refresh</TextBlock>
         </Button>
     </Grid>
