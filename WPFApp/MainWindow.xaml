@@ -6,20 +6,6 @@
         xmlns:local="clr-namespace:WPFGymApp"
         mc:Ignorable="d"
         Title="App Window" Height="450" Width="800">
-    <Window.Resources>
-        <LinearGradientBrush x:Key ="BackgroundBrush" EndPoint="0.504,1.5" StartPoint="0.504,0.03">
-            <GradientStop Color="white" Offset="0"/>
-            <GradientStop Color="LightBlue" Offset="0.567"/>
-        </LinearGradientBrush>
-        <LinearGradientBrush x:Key ="ButtonBrush" EndPoint="0.504,1.5" StartPoint="0.504,0.03">
-            <GradientStop Color="White" Offset="0"/>
-            <GradientStop Color="LightBlue" Offset="0.567"/>
-        </LinearGradientBrush>
-        <LinearGradientBrush x:Key ="TabBrush" EndPoint="0.504,1.5" StartPoint="0.504,0.03">
-            <GradientStop Color="LightBlue" Offset="0"/>
-            <GradientStop Color="CadetBlue" Offset="0.567"/>
-        </LinearGradientBrush>
-    </Window.Resources>
     <Grid Name ="Grid1" Background="LightGray">
         <TextBlock Margin ="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name ="Title1" TextAlignment="Left" Height="45" Width="800" FontSize="30" Background="#494949" Foreground="LightGray">
             <Bold>&#160;&#160;&#160;Menu</Bold>
@@ -39,18 +25,25 @@
         <Button Name ="Button4" Margin="20,200,0,0" Height="50" Width="100" HorizontalAlignment="Left" Background="LightGray">
             <TextBlock>Option 4</TextBlock>
         </Button>
-        <TextBlock Background="White" Margin ="0,50,10,0" VerticalAlignment="Top" Name ="Tab1" TextAlignment="Center" Height="300" Width="100" FontSize="20" HorizontalAlignment="Right">
-            Stats
+        <TextBlock Padding="5,0,0,0" Name ="ResultBlock" Background="White" Margin ="0,50,10,0" VerticalAlignment="Top" TextAlignment="Left" Height="300" Width="100" FontSize="15" HorizontalAlignment="Right">
+          Test
         </TextBlock>
-        <TabControl  Margin ="10,100,10,0" VerticalAlignment="Top" Name ="Tab3" Height="270" Width="650" FontSize="20" HorizontalAlignment="Left">
+        <TabControl  Margin ="10,45,10,0" VerticalAlignment="Top" Name ="Tab3" Height="350" Width="650" FontSize="15" HorizontalAlignment="Left">
             <TabItem Header="Option1">
                 <Label Content="Content goes here..." />
             </TabItem>
             <TabItem Header="Option2" />
             <TabItem Header="Option3" />
+            <TabItem Header="Option4" />
+            <TabItem Header="Option5" />
+            <TabItem Header="Option6" />
+            <TabItem Header="Option7" />
+            <TabItem Header="Option8" />
+            <TabItem Header="Option9" />
+            <TabItem Header="Option0" />
         </TabControl>
         
-        <Button Name ="Tab1Button" Margin="0,0,10,20" Height="50" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFAAAAAA">
+        <Button Click="refresh" Name ="Tab1Button" Margin="0,0,10,20" Height="50" Width="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#FFAAAAAA">
             <TextBlock>Refresh</TextBlock>
         </Button>
     </Grid>

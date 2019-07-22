@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,21 @@ namespace WPFGymApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+        private async void refresh(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader(@"C:\Users\zansari\Documents\GitHub\xaml-tutorial\WPFApp\TestFile.txt"))
+                {
+                    string line = await sr.ReadToEndAsync();
+                    ResultBlock.Text = line;
+                }
+            }
+            catch (FileNotFoundException ex)
+            {
+                ResultBlock.Text = ex.Message;
+            }
         }
     }
 }
