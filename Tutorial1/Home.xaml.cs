@@ -24,5 +24,18 @@ namespace Tutorial1
         {
             InitializeComponent();
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // View Expense Report
+            Report expenseReportPage = new Report(this.peopleListBox.SelectedItem);
+            this.NavigationService.Navigate(expenseReportPage);
+
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,5 +24,10 @@ namespace Tutorial1
         {
             InitializeComponent();
         }
+        public Report(object data) : this()
+        {
+            // Bind to expense report data.
+            this.DataContext = data;
+        }
     }
 }
